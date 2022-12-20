@@ -84,7 +84,7 @@ __global__ void evalCell(int *prevField, int *newField, int fieldSize) {
 void evalField(int *field, int fieldSize) {
   // Declare grid size and block size
   const int BLOCK_SIZE = 512;
-  const int GRID_SIZE = fieldSize * fieldSize / THREAD_SIZE + 1;
+  const int GRID_SIZE = fieldSize * fieldSize / BLOCK_SIZE + 1;
 
   // Declare GPU memory pointers
   size_t BYTES = fieldSize * fieldSize * sizeof(int);
@@ -141,6 +141,61 @@ void initField(int *field, int fieldSize) {
     fin.close();
   }
 }
+
+// Init field hardcode
+// void initField(int *field, int fieldSize) {
+//   // Hardcoded values:
+// 	const int gosper[36][2] = {
+// 		{25, 10},
+// 		{23, 11},
+// 		{25, 11},
+// 		{13, 12},
+// 		{14, 12},
+// 		{21, 12},
+// 		{22, 12},
+// 		{35, 12},
+// 		{36, 12},
+// 		{12, 13},
+// 		{16, 13},
+// 		{21, 13},
+// 		{22, 13},
+// 		{35, 13},
+// 		{36, 13},
+// 		{1, 14},
+// 		{2, 14},
+// 		{11, 14},
+// 		{17, 14},
+// 		{21, 14},
+// 		{22, 14},
+// 		{1, 15},
+// 		{2, 15},
+// 		{11, 15},
+// 		{15, 15},
+// 		{17, 15},
+// 		{18, 15},
+// 		{23, 15},
+// 		{25, 15},
+// 		{11, 16},
+// 		{17, 16},
+// 		{25, 16},
+// 		{12, 17},
+// 		{16, 17},
+// 		{13, 18},
+// 		{14, 18}
+// 	};
+        
+// 	// Repeating pattern
+// 	const int TEMPLATE_SIZE = 40; // Max size of pattern generated
+// 	for (int k = 0; k < 36; k++) {
+// 		int x = gosper[k][0];
+// 		int y = gosper[k][1];
+// 		for (int i = 0; i < fieldSize / TEMPLATE_SIZE; i++) {  
+// 			for (int j = 0; j < fieldSize / TEMPLATE_SIZE; j++) {  
+// 				field[(i*TEMPLATE_SIZE*fieldSize + y*fieldSize)+(j*TEMPLATE_SIZE+ x)] = 1;
+// 			}
+// 		}
+// 	}
+// }
 
 int main() {
   int iter = 1000;
