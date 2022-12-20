@@ -24,4 +24,4 @@ generate_field.py: Generate initial pattern to use. Output at field.txt (specify
 field-gosper.txt: Gosper's Glider Gun pattern. 40x40 <br />
 field.txt: Default output file for generate_field.py <br /> <br />
  
-Note: field.txt and field-gosper.txt are used in serial.cpp and cuda.cu in initField() procedure
+Note: field.txt and field-gosper.txt are used in serial.cpp and cuda.cu in initField() procedure. Change TEMPLATE_SIZE according to field_size in generate_field.py
