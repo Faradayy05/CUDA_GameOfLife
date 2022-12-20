@@ -5,5 +5,5 @@ Conway's Game of Life implementation with CUDA
 | -------------- | -----------------------------|
 | | |
 | 24060120130059 | Liem, Roy Marcelino          |
-| | Muhammad Fariz Aditya Pratama|
-| | Daniel Elul Zabdianto        |
+| | |
+| | |
