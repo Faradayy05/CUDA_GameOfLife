@@ -7,7 +7,7 @@ Conway's Game of Life implementation with CUDA
 | 24060120130044 | Alvin Triseptia Mairis       |
 | 24060120130059 | Liem, Roy Marcelino          |
 | 24060120140149 | Muhammad Fariz Aditya Pratama|
-| | |
+| 24060120140164 | Daniel Elul Zabdianto        |
 
 ## Colab Link
 https://colab.research.google.com/drive/1FQyVgMeABPgA6Y005ZVVHpBjjBvvZMTJ#scrollTo=otxJgz8OfRsi&uniqifier=1
